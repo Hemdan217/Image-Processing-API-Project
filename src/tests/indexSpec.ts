@@ -1,13 +1,16 @@
-import resize from "./../resize";
+import supertest from 'supertest';
+import app from '../index';
 
-it("expect myFunc(5) to equal 25", async () => {
-  await resize("./../output.jpg", 300, 300).then((data) =>
-    expect(data).toEqual({
-      format: "jpeg",
-      width: 300,
-      height: 300,
-      channels: 3,
-      premultiplied: false,
-    })
-  );
+const request = supertest(app);
+describe('1. Test endpoint responses', () => {
+  it('1.1 gets the placeholder endpoint', async done => {
+    const response = await request.get('/placeholder');
+    expect(response.status).toBe(200);
+    done();
+  });
+  it('1.2 gets the api endpoint', async done => {
+    const response = await request.get('/api');
+    expect(response.status).toBe(200);
+    done();
+  });
 });

@@ -19,7 +19,7 @@ upload.post("/upload", (req, res) => {
   console.log(height, width);
   /// after getting the image from the server , redirect to api
   res.redirect(
-    `/api?path=${seletedImage.substring(
+    `/api?path=${seletedImage.slice(
       0,
       seletedImage.length - 4
     )}&width=${width}&height=${height}`
