@@ -18,14 +18,4 @@ describe('1. Test endpoint responses', () => {
         expect(response.status).toBe(200);
         done();
     });
-    it('1.3 gets the api endpoint', async (done) => {
-        const response = await request.get('/upload');
-        expect(response.status).toBe(200);
-        done();
-    });
-    it('1.4 gets the api endpoint', async (done) => {
-        const response = await request.get('/generate');
-        expect(response.status).toBe(200);
-        done();
-    });
 });

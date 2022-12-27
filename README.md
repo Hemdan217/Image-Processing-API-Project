@@ -3,6 +3,7 @@
 1. npm run build
 2. npm run test
 3. npm run start
+4. npm run lint
 
 ## brief of usage:
 

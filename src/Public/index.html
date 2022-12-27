@@ -10,8 +10,9 @@
   <style>
     body {
       margin: 10px;
-      height: 100vh;
-      padding: 30px;
+      /* height: 100vh; */
+      font-size: 1em;
+      font-weight: bold;
       background-image: radial-gradient(#1283da, #869b8a);
     }
   </style>
@@ -29,8 +30,10 @@
         <a href="http://localhost:3000/api?path=fjord&width=4444&height=5400">http://localhost:3000/api?path=fjord&width=4444&height=5400</a>
       </p>
       <p class="output">It requires the path of image file,then width,height as Query string</p>
-
       <p class="output">Then resize the image depending on these parameters and sending it to the server</p>
+      <p class="output">alternative way instead of sending the paramerts using query string is using the endpoint
+        <a href="http://localhost:3000/upload">http://localhost:3000/upload</a>
+      </p>
     </li>
     <li>
       <p class="output">The Second endpoint is related to generate the image</p>
@@ -40,6 +43,9 @@
       <p class="output">It accepts width,height,red,blue,green as Query string</p>
 
       <p class="output">Then generatethe image depending on these parameters and sending it to the server</p>
+      <p class="output">alternative way instead of sending the paramerts using query string is using the endpoint
+        <a href="http://localhost:3000/generate">http://localhost:3000/generate</a>
+      </p>
     </li>
   </ul>
 
